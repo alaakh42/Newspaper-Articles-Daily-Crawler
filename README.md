@@ -35,11 +35,8 @@ The directory structure is divided into those files:
 3. `date_retrieval_manually.py`: A file that contains some functions to try extract article dates specifically for the non-RSS websites list, it was developed using Beautifulsoup4 library.
 4. `aricele_3k_extractor.py`: Contains code that runs the newspaper package [python3], it is ***NOT YET USED*** and need integration with `sqlite3` database
 
-
 ### Description:
 - The part for the websites that don't have RSS feed support, An 8 scrapy spiders that crawl equal subsets of the NON_RSS websites that work concurrrently to make use of the #processrs of the machine. Note that you may adjust the crawler for your machine by inspecting the #cores in your machine then specify Number of spiders = Number of cores. Just comment the rest of Spider Classes and their calling. the crawler only scrape one level of the websites in other words it only scraps the home page for each website and only follow one level of links.
-
-
 
 ### Final Note:
 - You can comment the code that writes in the news_db.db, and just write data in files by uncommenting the following section in each of the spiders class in toscrape.py file:
