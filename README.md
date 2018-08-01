@@ -3,8 +3,9 @@
 - the project is developed for crawling news websites that have RSS feeds.
 - Store the data into a database.
 
->***NON_RSS_websites*** = 88
->***NON_RSS_websites that return dates*** = 62
+>***NON_RSS_Websites*** = 88
+
+>***NON_RSS_Websites that return dates*** = 62
 
 The directory structure is divided into those files:
 
