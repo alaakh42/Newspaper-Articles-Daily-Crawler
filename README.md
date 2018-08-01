@@ -29,12 +29,11 @@ The directory structure is divided into those files:
 1. `toscrape.py`
 - Core file of the NON-RSS-SITES crawler where the spiders are created and called 
 - To run the crawler, write the following command in the terminal [scrapy runspider toscrape.py]
-- To disable the automatic logs of the spider add option "--nolog " 
+- To disable the automatic logs of the spider add option `--nolog`
 - For more investigation regarding scrapy options use ```scrapy --help``` or `scrapy runspider --help`
 2. `article_text_retrieval.py`: Contains a function that uses python-goose to extract arabic and english text using 'html parser' which is specified by default or 'soup' parser.
 3. `date_retrieval_manually.py`: A file that contains some functions to try extract article dates specifically for the non-RSS websites list, it was developed using Beautifulsoup4 library.
-4. `checking_parellism.py`: To inspect the websites chunks that are crawled by each of the the 8 spiders corrisponding to the CPU 8 cores.
-5. `aricele_3k_extractor.py`: Contains code that runs the newspaper package [python3], it is ***NOT YET USED*** and need integration with `sqlite3` database
+4. `aricele_3k_extractor.py`: Contains code that runs the newspaper package [python3], it is ***NOT YET USED*** and need integration with `sqlite3` database
 
 
 ### Description:
@@ -43,7 +42,7 @@ The directory structure is divided into those files:
 
 
 ### Final Note:
-- You can disable/comment the code that writes in the news_db.db, and just write data in files by uncommenting the following section in each of the spiders class in toscrape.py file:
+- You can comment the code that writes in the news_db.db, and just write data in files by uncommenting the following section in each of the spiders class in toscrape.py file:
 ```python
 with open("Parallel_Extracted_Urls/urls_0.txt", "a") as myfile:    
 	print "LINK ADDED_0"
