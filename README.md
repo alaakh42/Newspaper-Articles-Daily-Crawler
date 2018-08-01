@@ -29,7 +29,7 @@ The directory structure is divided into those files:
 ### Project Directory files:
 1. `toscrape.py`
 - Core file of the NON-RSS-SITES crawler where the spiders are created and called 
-- To run the crawler, write the following command in the terminal [scrapy runspider toscrape.py]
+- To run the crawler, write the following command in the terminal `scrapy runspider toscrape.py`
 - To disable the automatic logs of the spider add option `--nolog`
 - For more investigation regarding scrapy options use ```scrapy --help``` or `scrapy runspider --help`
 2. `article_text_retrieval.py`: Contains a function that uses python-goose to extract arabic and english text using 'html parser' which is specified by default or 'soup' parser.
@@ -40,7 +40,7 @@ The directory structure is divided into those files:
 - The part for the websites that don't have RSS feed support, An 8 scrapy spiders that crawl equal subsets of the NON_RSS websites that work concurrrently to make use of the #processrs of the machine. Note that you may adjust the crawler for your machine by inspecting the #cores in your machine then specify Number of spiders = Number of cores. Just comment the rest of Spider Classes and their calling. the crawler only scrape one level of the websites in other words it only scraps the home page for each website and only follow one level of links.
 
 ### Final Note:
-- You can comment the code that writes in the news_db.db, and just write data in files by uncommenting the following section in each of the spiders class in toscrape.py file:
+- You can comment the code that writes in the `news_db.db`, and just write data in files by uncommenting the following section in each of the spiders class in `toscrape.py` file:
 ```python
 with open("Parallel_Extracted_Urls/urls_0.txt", "a") as myfile:    
 	print "LINK ADDED_0"
